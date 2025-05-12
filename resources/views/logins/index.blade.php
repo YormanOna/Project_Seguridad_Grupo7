@@ -26,6 +26,13 @@
         <a class="navbar-brand" href="#"><i class="bi bi-shield-lock-fill"></i> Sql Inyection Demo</a>
       </div>
     </nav>
+    @if (session('error'))
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{ session('error') }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+      </div>
+    @endif
+
     <div class="container form-container">
       <div class="card shadow rounded-4">
         <div class="card-body p-4">
@@ -49,7 +56,6 @@
             <div class="mb-4">
               <label for="opciones" class="form-label">Selecciona una opción</label>
               <select class="form-select" id="opciones" name="opciones" required>
-                <option selected disabled>Elige una opción</option>
                 <option value="opcion1">Seguro</option>
                 <option value="opcion2">Inseguro</option>
               </select>
