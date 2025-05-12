@@ -21,6 +21,16 @@ class LoginController extends Controller
         else{
             $sqlUser =login::where('email',$email)->where('contraseña',$password)->get();
         }
+        // Si encontró usuario válido
+        if (count($sqlUser) > 0) {
+            if ($opcion == 'opcion1') {
+                return redirect('/comentario');
+            } else {
+                return response()->json(['mensaje' => 'Inicio de sesión exitoso', 'datos' => $sqlUser]);
+            }
+        } else {
+            return back()->with('error', 'Credenciales incorrectas');
+        }
         return $sqlUser;
     }
 }
