@@ -5,8 +5,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ComentariosController;
 Route::get('/', function () {
     return view('welcome');
-
-    
 });
 
 Route::get('/login', [LoginController::class,'index']);

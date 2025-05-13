@@ -43,14 +43,14 @@
               <label for="email" class="form-label">Correo electrónico</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" id="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+                <input type="email" class="form-control" id="email" name="email" placeholder="user1@example.com" required>
               </div>
             </div>
             <div class="mb-3">
               <label for="contraseña" class="form-label">Contraseña</label>
               <div class="input-group">
                 <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="Ingresa tu contraseña" required>
+                <input type="password" class="form-control" id="contraseña" name="contraseña" placeholder="contraseña" required>
               </div>
             </div>
             <div class="mb-4">
